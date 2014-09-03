@@ -1,13 +1,31 @@
 body
 {
-background-color:#f00000;
+background-color:#FF0066;
 }
-
+input[type="submit"]
+{
+		height:22.5px;
+		width:60px;
+		border-radius:5px;
+		background-color:orange;
+}
+.top
+{
+		height:400px;
+		width:300px;
+		top:80px;
+		left:50px;
+		background-color:white;
+		padding-top:10px;
+		position:absolute;
+		border-radius:3px;
+		box-shadow:10px 10px 5px #888888 ;
+}
 .firstdiv
 {
   position: relative;
   height: 40px;
-  width: 100%;
+  width: 1370px;
   background-color: #1947D1;
   padding-top: 15px;
   padding-left: 5px;
@@ -17,16 +35,40 @@ background-color:#f00000;
   font-weight: bold;
   text-align : left;
   font-size: 20px;
+  top:-10px;
+  left:-10px;
+  right:10px;
+}
+.Categories 
+{
+		height:350px;
+		width:250px;
+		top:80px;
+		right:50px;
+		background-color:white;
+		padding-top:10px;
+		position:absolute;
+		border-radius:3px;
+		box-shadow:10px 10px 5px #888888 ;
+		
+}
+.Categories li{
+padding-top:10px;
+list-style-type: circle;
+font-family:cursive;
+
 }
 #pagename
 {
 left:50%;
 top:30px;
+font-family:cursive;
+color:white;
 }
 #login
 {
 	
-	top:30px;
+	top:20px;
 	left:80%;
 	margin-left:-254px;
 }
@@ -42,10 +84,15 @@ ul{
 	margin: -10px;
 }
 
-li {
+.signinpart li {
 	display: inline;
-	font-family: Futura, Tahoma, sans-serif;
+	font-family: Times,Futura, Tahoma, sans-serif;
 	padding: 5px;
-	border-radius: 5px 5px;
+	border-radius: 5px;
 	
+}
+a
+{
+text-decoration:none;
+color:#FF0066;
 }
