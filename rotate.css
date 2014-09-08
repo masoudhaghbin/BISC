@@ -1,20 +1,81 @@
 body{
-        /*font-family: B Mehdix, Arial, "MS Trebuchet", sans-serif;*/
-		font-family: A Afsaneh;
-        background-color: #bfea30;
-    }
+	font-family: A Afsaneh;
+	background-image: url('18.jpg');
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-color: #bfea30;
+}
+
+
+.signinpart
+{
+	height: 50px;
+	width: 470px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.signinpart a
+{
+	float: left;
+	color: #e3e3e3;
+	margin-left: 60px;
+}
+
+
+form li
+{
+	font-family: A Afsaneh;
+	list-style-type: none;
+	display: inline;
+}
+
+input[type="text"] ,input[type="password"]{
+	font-family: Times,Futura, Tahoma, sans-serif;
+	appearance: none;
+ 	padding: 5px;
+	border-radius: 1px;
+	height: 22.5px;
+	width: 120px:
+}
+
+input[type="submit"]
+{
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color:#333;
+	border:1px solid #61c4ea;
+	background-color:#e3e3e3;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#333;
+	font-family: A Afsaneh;
+	font-size:14px;
+	text-shadow:#b2e2f5 0 1px 0;
+	padding:1px;
+	height:22.5px;
+	width:60px;
+}
+
+::-webkit-input-placeholder {
+   color: #6b969d;
+   background-color: white;
+   font-family: A Afsaneh;
+}
 	
 .bmenu{
 	height:600px;
     width:250px;
     overflow:hidden;
-    position:relative;
-	background-color: #bfea30;
+    position:absolute;
 	float:right;
-	margin-top: 0px;
     padding: 0px;
-    /*margin: 0 0 10px 0;*/
-    position: relative;
+    margin: 0 0 10px 0;
 }
 .bmenu li{
     font-size: 25px;
@@ -25,7 +86,7 @@ body{
     color: transparent;
     display: block;
     text-transform: uppercase;
-    text-shadow: 0px 0px 4px #444;
+    text-shadow: 0px 0px 4px #e3e3e3;
     letter-spacing: 1px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -35,55 +96,28 @@ body{
 }
 
 .bmenu:hover li a{
-    text-shadow: 0px 0px 6px #444;
+    text-shadow: 0px 0px 6px #e3e3e3;
 }
 .bmenu li a:hover{
     color: ##444;
-    text-shadow: 0px 0px 1px #444;
+    text-shadow: 0px 0px 1px #e3e3e3;
     padding-left: 10px;
 }
- /*   #list{
-        height:600px;
-        width:250px;
-        overflow:hidden;
-        position:relative;
-        background-color: #E6E6E6;
-		float:left;
-		margin-top: -160px;
-    }
-    #list ul,
-    #list li{
-		font-family: A Afsaneh;	
-        list-style:none;
-        margin:0;
-        padding:0;
-		font-size: 10%;
-    }
-    #list a{
-        position:absolute;
-        text-decoration: none;
-        color:#6b969d;
-    }
-    #list a:hover{
-        color:#ccc;
-		position: absolute;
-    }*/
+
 	
-	@font-face
-	{
-		font-family: A Afsaneh;
-		src: url(persian-Afsaneh.ttf);
-	}
+@font-face
+{
+	font-family: A Afsaneh;
+	src: url(persian-Afsaneh.ttf);
+}
 .rw-wrapper{
 	width: 80%;
 	position: relative;
 	margin: 50px auto 0 auto;
 	float: left;
-	/*font-family: B Mehdix,'Bree Serif';*/
 	padding: 10px;
 }
 .rw-sentence{
-	/*font-family: B Mehdix,'Bree Serif';*/
 	float: left;
 	margin: 100px;
 	text-align: right;
