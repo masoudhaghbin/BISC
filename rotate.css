@@ -1,18 +1,59 @@
 body{
-        font-family: B Mehdix, Arial, "MS Trebuchet", sans-serif;
-        background-color: #E6E6E6;
+        /*font-family: B Mehdix, Arial, "MS Trebuchet", sans-serif;*/
+		font-family: A Afsaneh;
+        background-color: #bfea30;
     }
-    #list{
+	
+.bmenu{
+	height:600px;
+    width:250px;
+    overflow:hidden;
+    position:relative;
+	background-color: #bfea30;
+	float:right;
+	margin-top: 0px;
+    padding: 0px;
+    /*margin: 0 0 10px 0;*/
+    position: relative;
+}
+.bmenu li{
+    font-size: 25px;
+    display: block;
+}
+
+.bmenu li a{
+    color: transparent;
+    display: block;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 4px #444;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.bmenu:hover li a{
+    text-shadow: 0px 0px 6px #444;
+}
+.bmenu li a:hover{
+    color: ##444;
+    text-shadow: 0px 0px 1px #444;
+    padding-left: 10px;
+}
+ /*   #list{
         height:600px;
         width:250px;
         overflow:hidden;
         position:relative;
         background-color: #E6E6E6;
 		float:left;
-		margin-top: -100px;
+		margin-top: -160px;
     }
     #list ul,
     #list li{
+		font-family: A Afsaneh;	
         list-style:none;
         margin:0;
         padding:0;
@@ -25,22 +66,26 @@ body{
     }
     #list a:hover{
         color:#ccc;
-    }
+		position: absolute;
+    }*/
 	
 	@font-face
 	{
-		font-family: B Mehdix;
-		src: url(Mehdi Heydari.ttf);
+		font-family: A Afsaneh;
+		src: url(persian-Afsaneh.ttf);
 	}
 .rw-wrapper{
 	width: 80%;
 	position: relative;
 	margin: 50px auto 0 auto;
-	font-family: B Mehdix,'Bree Serif';
+	float: left;
+	/*font-family: B Mehdix,'Bree Serif';*/
 	padding: 10px;
 }
 .rw-sentence{
-	margin: 0;
+	/*font-family: B Mehdix,'Bree Serif';*/
+	float: left;
+	margin: 100px;
 	text-align: right;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
