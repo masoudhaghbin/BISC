@@ -11,6 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="rotate.css">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="jquery_popup.js"></script>
 		<style>
 			.no-cssanimations .rw-wrapper .rw-sentence span:first-child{
 				opacity: 1;
@@ -67,8 +69,40 @@
 					<li><input type="submit" name="login" value="ورود" ></li> 
 				</ul>
 			</form>
-			<a href="#">هنوز ثبت نام نکرده اید؟</a>
+			<a href="#" id="onclick">هنوز ثبت نام نکرده اید؟</a>
 		</div>
+		
+		
+		<div id="contactdiv">
+            <form class="form" action="#" id="contact">
+                <img src="button_cancel.png" class="img" id="cancel"/>	
+                <h3>فرم ثبت نام</h3>
+                <hr/><br/>
+                <label>نام: <span>*</span></label>
+                <br/>
+                <input type="text" id="firstname" placeholder="first name"/><br/>
+                <br/>
+                <label>نام خانوادگی: <span>*</span></label>
+                <br/>
+                <input type="text" id="lastname" placeholder="last name"/><br/>
+                <br/>
+                <label>نام کاربری: <span>*</span></label>
+                <br/>
+                <input type="text" id="username" placeholder="user name"/><br/>
+                <br/>
+                <label>رمز عبور:<span>*</span></label>
+                <br/>				
+				<input type="password" id="password" placeholder="password"/><br/>
+                <br/>
+				<label>تکرار رمز عبور:<span>*</span></label>
+                <br/>				
+				<input type="password" id="confirmpassword" placeholder="confirm password"/><br/>
+                <br/>
+                <input type="submit" id="send" value="ارسال"/>
+                <input type="submit" id="cancel" value="انصراف"/>
+                <br/>
+            </form>
+        </div>
 
 	</body>
 </html>

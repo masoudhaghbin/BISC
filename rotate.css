@@ -11,8 +11,9 @@ body{
 
 .signinpart
 {
+	display: inline;
 	height: 50px;
-	width: 470px;
+	width: 500px;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -33,8 +34,17 @@ form li
 	display: inline;
 }
 
+#contactdiv input{
+    width:100%;
+    height:35px;
+    margin-top:0px;
+    border:1px solid #999;
+    border-radius:3px;
+    padding:5px;
+	font-family: A Afsaneh;
+}
+
 input[type="text"] ,input[type="password"]{
-	font-family: Times,Futura, Tahoma, sans-serif;
 	appearance: none;
  	padding: 5px;
 	border-radius: 1px;
@@ -104,7 +114,73 @@ input[type="submit"]
     padding-left: 10px;
 }
 
-	
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli);
+
+h3{
+    font-size:18px;
+    text-align:center;
+    text-shadow:1px 0px 3px gray;
+}
+#onclick{
+   padding:3px;
+   cursor:pointer;
+   padding:5px 5px 5px 15px;
+   color:white;
+   /*box-shadow:1px 1px 5px grey;*/
+   border-radius:3px;
+}
+b{
+    font-size:18px;
+    text-shadow:1px 0px 3px gray;
+}
+#popup{
+    padding-top:80px;
+}
+.form{
+    border-radius:2px;
+    padding:20px 30px;
+    box-shadow:0 0 15px;
+    font-size:14px;
+    font-weight:bold;
+    width:350px;
+    margin:20px 250px 0 35px;
+    float:left;
+}
+
+#contactdiv{ 
+    opacity:0.92; 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+}
+
+#contact{   
+    width:350px;
+    margin:0px;
+    background-color:white;
+    position: relative;
+    border: 5px solid rgb(90, 158, 181);
+	left: 50%;
+    top: 50%;
+    margin-left:-210px;
+    margin-top:-255px;
+}
+
+.img{
+    float: right;
+    margin-top: -35px;
+    margin-right: -37px;
+}
+
+
 @font-face
 {
 	font-family: A Afsaneh;
