@@ -1,6 +1,6 @@
 ﻿<?php
 include("config.php");
-
+$flag="";
 session_start();
 connect();
 if(isset($_POST['Logout'])) {
@@ -142,6 +142,8 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["use
 				</ul>
 			</form>
 			<a href='#' id='onclick'>هنوز ثبت نام نکرده اید؟</a>
+		<br>
+        <h4><font color='red'>$flag</font></h4>
 		</div> ");
         }
         else{
