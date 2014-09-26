@@ -3,6 +3,7 @@ include("config.php");
 
 session_start();
 connect();
+$flag="";
 if(isset($_POST['Logout'])) {
 
 session_destroy();
@@ -39,15 +40,30 @@ if (isset($_SESSION['username'])){
 
     }
 
-if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["username"]) && isset($_POST["password"])  )
+if (isset($_POST['send'])  )
 
 {
-     $first_name = $_POST['first_name'];
-     $last_name = $_POST['last_name'] ;
+     $first_name = $_POST['firstname'];
+     $last_name = $_POST['lastname'] ;
      $e_mail =  $_POST['email']    ;
      $user_name = $_POST['username']  ;
      $passwd = $_POST['password']    ;
-     mysql_query("INSERT INTO user VALUES ('$user_name','$e_mail',,'$passwd','$first_name','$last_name')  ") or die(mysql_error()) ;
+      $result = mysql_query("select * from users where Username='$user_name' or Email='$e_mail' ") or die(mysql_error()) ;
+     if ($passwd!=$_POST['confirmpassword']){
+       $flag="password and confirmpassword is not equal";
+     }
+
+
+     else if (mysql_num_rows($result)!=0) {
+       $flag="email or username is reapited please insert another email or username" ;
+        }
+
+     else if (strlen($passwd) < 4){
+       $flag="your password is weak atlesat password must be 4 lenght" ;
+     }
+     else {
+
+     mysql_query("INSERT INTO users VALUES ('$user_name','$e_mail','$passwd','$first_name','$last_name')  ") or die(mysql_error()) ;
 
 
      if (mysql_affected_rows()){
@@ -56,7 +72,7 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["use
      else {
        die("your insert information don't Successful")     ;
      }
-
+          }
 
 
 
@@ -141,8 +157,10 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["use
 					<li><input type='submit' name='login' value= 'ورود' ></li>
 				</ul>
 			</form>
-			<a href='#' id='onclick'>هنوز ثبت نام نکرده اید؟</a>
-		</div> ");
+			<a href='#' id='onclick'>هنوز ثبت نام نکردهاید؟</a>
+        <br>
+        <h4><font color='red'>$flag</font></h4>
+        </div> ");
         }
         else{
 
@@ -159,30 +177,30 @@ if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["use
                 <hr/><br/>
                 <label>نام: <span>*</span></label>
                 <br/>
-                <input type="text" id="firstname" placeholder="first name"/><br/>
+                <input type="text" id="firstname" name="firstname" placeholder="first name"/><br/>
                 <br/>
                 <label>نام خانوادگی: <span>*</span></label>
                 <br/>
-                <input type="text" id="lastname" placeholder="last name"/><br/>
+                <input type="text" name="lastname" id="lastname" lastname placeholder="last name"/><br/>
                 <br/>
                 <label>نام کاربری: <span>*</span></label>
                 <br/>
-                <input type="text" id="username" placeholder="user name"/><br/>
+                <input type="text" name="username" id="username" placeholder="user name"/><br/>
                 <br/>
                 <label>ایمیل:<span>*</span></label>
                 <br/>
-				<input type="text" id="email" placeholder="email"/><br/>
+				<input type="text" name="email" id="email" placeholder="email"/><br/>
                 <br/>
                 <label>رمز عبور:<span>*</span></label>
                 <br/>
-				<input type="password" id="password" placeholder="password"/><br/>
+				<input type="password" name="password" id="password" placeholder="password"/><br/>
                 <br/>
 				<label>تکرار رمز عبور:<span>*</span></label>
                 <br/>				
-				<input type="password" id="confirmpassword" placeholder="confirm password"/><br/>
+				<input type="password" name="confirmpassword" id="confirmpassword" placeholder="confirm password"/><br/>
                 <br/>
-                <input type="submit" id="send" value="ارسال"/>
-                <input type="submit" id="cancel" value="انصراف"/>
+                <input type="submit" name="send" id="send" value="ارسال"/>
+                <input type="submit" name="cancel" id="cancel" value="انصراف"/>
                 <br/>
             </form>
         </div>
