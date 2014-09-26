@@ -1,6 +1,6 @@
 ﻿<?php
 include("config.php");
-
+$flag="";
 session_start();
 connect();
 $flag="";
@@ -157,10 +157,17 @@ if (isset($_POST['send'])  )
 					<li><input type='submit' name='login' value= 'ورود' ></li>
 				</ul>
 			</form>
+<<<<<<< HEAD
 			<a href='#' id='onclick'>هنوز ثبت نام نکردهاید؟</a>
         <br>
         <h4><font color='red'>$flag</font></h4>
         </div> ");
+=======
+			<a href='#' id='onclick'>هنوز ثبت نام نکرده اید؟</a>
+		<br>
+        <h4><font color='red'>$flag</font></h4>
+		</div> ");
+>>>>>>> origin/master
         }
         else{
 
