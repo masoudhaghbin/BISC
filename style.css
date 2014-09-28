@@ -1,4 +1,4 @@
-body{
+﻿body{
 	font-family: A Afsaneh;
 	background-image: url('18.jpg');
 	background-size:100% 100%;
@@ -10,10 +10,10 @@ body{
 
 
 .signinpart
-{
+{	
 	display: inline;
 	height: 50px;
-	width: 500px;
+	width: 1000px;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -36,7 +36,7 @@ form li
 
 #contactdiv input{
     width:100%;
-    height:35px;
+    height:25px;
     margin-top:0px;
     border:1px solid #999;
     border-radius:3px;
@@ -76,6 +76,7 @@ input[type="submit"]
    color: #6b969d;
    background-color: white;
    font-family: A Afsaneh;
+   padding-bottom: 10px; 
 }
 	
 .bmenu{
@@ -141,13 +142,14 @@ b{
     padding-top:80px;
 }
 .form{
-    border-radius:2px;
+    border-radius:20px;
     padding:20px 30px;
     box-shadow:0 0 15px;
     font-size:14px;
     font-weight:bold;
     width:350px;
-    margin:20px 250px 0 35px;
+    /*margin:200px 250px 0px 35px;*/
+	margin-top:-10px;
     float:left;
 }
 
@@ -309,4 +311,53 @@ b{
 }
 @media screen and (max-width: 320px){
 	.rw-sentence { font-size: 9px; }
+}
+
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background: white url('indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #FFFFCC;
+	color: black;
 }

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+﻿$(document).ready(function() {
     setTimeout(popup, 3000);
 
     function popup() {

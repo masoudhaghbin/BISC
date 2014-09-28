@@ -1,6 +1,6 @@
 ﻿<?php
 include("config.php");
-$flag="";
+
 session_start();
 connect();
 $flag="";
@@ -86,28 +86,37 @@ if (isset($_POST['send'])  )
 
 <html lang="fa" dir="rtl">
 	<head>
-		<meta charset="UTF-8" />
+		<meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <title>Rotating Words with CSS Animations</title>
+        <title>سایت اشتراک اطلاعات کتاب</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Rotating Words with CSS Animations" />
         <meta name="keywords" content="css3, animations, rotating words, sentence, typography" />
         <meta name="author" content="Codrops" />
 		<link href='http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="rotate.css">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="jquery_popup.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.autocomplete.js"></script>
 		<style>
 			.no-cssanimations .rw-wrapper .rw-sentence span:first-child{
 				opacity: 1;
 			}
 		</style>
+		
+		<script>
+			$(document).ready(function(){
+			$("#tag").autocomplete("autocomplete.php", 
+			{
+			selectFirst: true
+			});
+										});
+		</script>
 	</head>
 
 	<body>
-		
 		<section class="rw-wrapper">
 			<h2 class="rw-sentence">
 				<span>شما در این جا</span>
@@ -123,8 +132,8 @@ if (isset($_POST['send'])  )
 			</h2>
 		</section>
 			
-			
-
+		
+		
 		<div class="bmenu">
 			<h2  style="margin-top:0px;"><font color="#e3e3e3">دسته بندی کتاب ها</font></h2>
 			<ul>
@@ -145,29 +154,26 @@ if (isset($_POST['send'])  )
     
 			</ul>
 		</div>
-
+		
          <?php
          if (!isset($_SESSION['username'])) {
          print("
 		<div class='signinpart'>
-			<form method='POST' action=''>
+			<form method='POST' action='' >
 				<ul>
+					<label><font color='#FFFFFF'> جستجو میان کتاب های موجود</font></label>
+					<li><input name='tag' type='text' id='tag' size='20' ></li>
+					<li><input type='submit' name='search' value= 'جستجو' ></li>;
+		
 					<li><input type='text' name='user' placeholder='نام کاربری' ></li>
 					<li><input type='password' name='pass' placeholder='رمز عبور ' ></li>
 					<li><input type='submit' name='login' value= 'ورود' ></li>
 				</ul>
 			</form>
-<<<<<<< HEAD
 			<a href='#' id='onclick'>هنوز ثبت نام نکردهاید؟</a>
         <br>
         <h4><font color='red'>$flag</font></h4>
         </div> ");
-=======
-			<a href='#' id='onclick'>هنوز ثبت نام نکرده اید؟</a>
-		<br>
-        <h4><font color='red'>$flag</font></h4>
-		</div> ");
->>>>>>> origin/master
         }
         else{
 
@@ -178,7 +184,7 @@ if (isset($_POST['send'])  )
 		      ?>
 		
 		<div id="contactdiv">
-            <form class="form" method="post" action="" id="contact">
+            <form class="form" method="post" action="" id="contact" accept-charset="UTF-8">
                 <img src="button_cancel.png" class="img" id="cancel"/>
                 <h3>فرم ثبت نام</h3>
                 <hr/><br/>
@@ -210,7 +216,7 @@ if (isset($_POST['send'])  )
                 <input type="submit" name="cancel" id="cancel" value="انصراف"/>
                 <br/>
             </form>
-        </div>
+        </div>	
 
 	</body>
 </html>
