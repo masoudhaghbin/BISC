@@ -11,6 +11,8 @@ header("location:home.php")  ;
 
 }
 
+
+
 if (isset($_POST["login"]))  {
         $username = $_POST['user'];
         $password = $_POST['pass'];
@@ -134,7 +136,7 @@ if (isset($_POST['send'])  )
 			
 		
 		
-		<div class="bmenu">
+		<div class="bmenu" >
 			<h2  style="margin-top:0px;"><font color="#e3e3e3">دسته بندی کتاب ها</font></h2>
 			<ul>
 				<li><a href="#">تاریخی</a></li>
@@ -155,13 +157,30 @@ if (isset($_POST['send'])  )
 			</ul>
 		</div>
 		
+		
+		
          <?php
          if (!isset($_SESSION['username'])) {
          print("
 		<div class='signinpart'>
 			<form method='POST' action='' >
 				<ul>
-					<label><font color='#FFFFFF'> جستجو میان کتاب های موجود</font></label>
+					<label><font color='#FFFFFF'> جستجو میان
+		<form method='POST' action='autocomplete.php'>
+		<select name='op' id='select'>
+			<option value='book'>
+				کتاب
+			</option>
+			<option value='writer'>
+				نویسنده
+			</option>
+			<option value='year'>
+				سال انتشار
+			</option>
+			<input type='submit' name='submit'/>
+		</select>
+		</form>
+		های موجود</font></label>
 					<li><input name='tag' type='text' id='tag' size='20' ></li>
 					<li><input type='submit' name='search' value= 'جستجو' ></li>;
 		
