@@ -165,31 +165,26 @@ if (isset($_POST['send'])  )
 		<div class='signinpart'>
 			<form method='POST' action='' >
 				<ul>
-					<label><font color='#FFFFFF'> جستجو میان
-		<form method='POST' action='autocomplete.php'>
-		<select name='op' id='select'>
-			<option value='book'>
-				کتاب
-			</option>
-			<option value='writer'>
-				نویسنده
-			</option>
-			<option value='year'>
-				سال انتشار
-			</option>
-			<input type='submit' name='submit'/>
-		</select>
-		</form>
-		های موجود</font></label>
-					<li><input name='tag' type='text' id='tag' size='20' ></li>
-					<li><input type='submit' name='search' value= 'جستجو' ></li>;
-		
+					<label><font color='#FFFFFF'> 
+						<form method='POST' action='autocomplete.php'>
+							جستجو براساس
+							<input type='radio' name='search_bench' value='کتاب'> کتاب  
+							<input type='radio' name='search_bench' value='نویسنده'> نویسنده 
+							<input type='radio' name='search_bench' value='سال انتشار'> سال انتشار 
+							<input name='tag' type='text' id='tag' size='20' >
+							<input type='submit' name='search' value= 'جستجو' >
+							
+						</form>
+					</font></label>
+
+							
 					<li><input type='text' name='user' placeholder='نام کاربری' ></li>
 					<li><input type='password' name='pass' placeholder='رمز عبور ' ></li>
-					<li><input type='submit' name='login' value= 'ورود' ></li>
+					<li><input type='submit' name='login' value= 'ورود' ></li><br>
+					<a href='#' id='onclick'>هنوز ثبت نام نکردهاید؟</a>
 				</ul>
 			</form>
-			<a href='#' id='onclick'>هنوز ثبت نام نکردهاید؟</a>
+			
         <br>
         <h4><font color='red'>$flag</font></h4>
         </div> ");

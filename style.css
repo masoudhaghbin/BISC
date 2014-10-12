@@ -1,6 +1,6 @@
 ﻿body{
 	font-family: A Afsaneh;
-	background-image: url('18.jpg');
+	background-image: url('bg.jpg');
 	background-size:100% 100%;
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,12 +8,14 @@
     background-color: #bfea30;
 }
 
-
+#select{
+	font-family: A Afsaneh;
+}
 .signinpart
 {	
 	display: inline;
 	height: 50px;
-	width: 1000px;
+	width: 1100px;
 	position: absolute;
 	left: 0px;
 	top: 0px;
