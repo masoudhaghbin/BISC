@@ -168,9 +168,9 @@ if (isset($_POST['send'])  )
 					<label><font color='#FFFFFF'> 
 						<form method='POST' action='autocomplete.php'>
 							جستجو براساس
-							<input type='radio' name='search_bench' value='کتاب'> کتاب  
-							<input type='radio' name='search_bench' value='نویسنده'> نویسنده 
-							<input type='radio' name='search_bench' value='سال انتشار'> سال انتشار 
+							<input type='radio' name='search_bench' value='book'> کتاب  
+							<input type='radio' name='search_bench' value='writer'> نویسنده 
+							<input type='radio' name='search_bench' value='year'> سال انتشار 
 							<input name='tag' type='text' id='tag' size='20' >
 							<input type='submit' name='search' value= 'جستجو' >
 							
