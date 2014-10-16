@@ -78,7 +78,11 @@ print ("<div style=' border-style: solid; border-color:black; border-width:2px; 
 
 <div>
 <form action="" method="post"style="margin-left:500px; margin-top:-150px; position: absolute; ">
+<<<<<<< HEAD
     <legend> introducing new book ... </legend>     <br>
+=======
+    introducing new book ...      <br>
+>>>>>>> origin/master
     <input type="text" name="name" placeholder="Book name" /> <br>
     <input type="text" name="writer" placeholder="writer name" /> <br>
     <input type="text" name="year" placeholder="publish year" /> <br>
