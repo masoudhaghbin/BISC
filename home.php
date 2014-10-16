@@ -119,6 +119,7 @@ if (isset($_POST['send'])  )
 	</head>
 
 	<body>
+		
 		<section class="rw-wrapper">
 			<h2 class="rw-sentence">
 				<span>شما در این جا</span>
@@ -156,6 +157,8 @@ if (isset($_POST['send'])  )
     
 			</ul>
 		</div>
+		
+		
 		
 		
 		
@@ -197,6 +200,9 @@ if (isset($_POST['send'])  )
         }
 		      ?>
 		
+		
+		
+		
 		<div id="contactdiv">
             <form class="form" method="post" action="" id="contact" accept-charset="UTF-8">
                 <img src="button_cancel.png" class="img" id="cancel"/>
@@ -231,6 +237,10 @@ if (isset($_POST['send'])  )
                 <br/>
             </form>
         </div>	
+		
+		<div id="footer" dir="ltr" >
+			<p class="copyright">&copy;&nbsp;&nbsp;2014 All Rights Reserved &nbsp;&bull;&nbsp; Design by <a href="http://www.freecsstemplates.org/">BISC GROUP</a>.</p>
+		</div>
 
 	</body>
 </html>
